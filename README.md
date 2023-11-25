@@ -100,3 +100,28 @@ Type "help" for help.
 postgres=# 
 ```
 
+# pgadmin
+
+I have included the pgadmin container as well and so this will be
+spun up alongside the database and adminer.  Currently it is available
+on prort 8090.  I will make this configurable in due course.
+
+To use it you need to connect it to your database at db.pg-demo-net.
+
+Login using the default credentials:
+
+   username: admin@pgadmin.com
+   password: password
+
+
+Once logged into pgadmin got to the dashboard page and select the
+quick link 'Add New Server'.  This brings up a modal dialog with
+multiple tabs at the top of the modal.  Select the Connection tab
+and then enter the Host name/address as db.pg-demo-net, the Username
+as postgres and the password as secret and then Save (which should
+now be enabled).
+
+This should add the db.pg-demo-net server to the servers list in
+the Object Explorer in the left hand pane.
+
+

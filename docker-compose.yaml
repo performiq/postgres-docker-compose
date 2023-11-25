@@ -40,7 +40,7 @@ services:
       PGADMIN_DEFAULT_PASSWORD: password
       PGADMIN_LISTEN_PORT: 80
     ports:
-      - 8090:80
+      - ${PGADMIN_PORT}:80
     volumes:
       - pgadmin:/var/lib/pgadmin
     networks:
