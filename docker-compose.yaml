@@ -32,6 +32,25 @@ services:
     depends_on:
       - db
 
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pg-demo-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@pgadmin.com
+      PGADMIN_DEFAULT_PASSWORD: password
+      PGADMIN_LISTEN_PORT: 80
+    ports:
+      - 8090:80
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    networks:
+      - pg-demo-net
+    depends_on:
+      - db
+
+volumes:
+  pgadmin:
+
 networks:
   pg-demo-net:
     external: true
