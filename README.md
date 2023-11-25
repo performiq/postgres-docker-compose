@@ -125,3 +125,5 @@ This should add the db.pg-demo-net server to the servers list in
 the Object Explorer in the left hand pane.
 
 
+![alt Setup DB Connection](https://github.com/performiq/postgres-docker-compose/blob/main/assets/setup_db_connection.jpg?raw=true)
+
